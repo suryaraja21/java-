@@ -1,0 +1,19 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner s= new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int last, sum=0;
+        int a=s.nextInt();
+        int b=a;
+        while(b>0){
+            last=b%10;
+            sum+=last*last*last;
+            b=b/10;
+        }
+        if(sum==a){
+            System.out.println("It is an armstrong number!");
+        }else{
+            System.out.println("IT is not an armstrong number");
+        }
+    }
+}
