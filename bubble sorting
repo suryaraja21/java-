@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner s= new Scanner(System.in);
+        int [] array;
+        array = new int [5];
+        System.out.println("Enter the values : ");
+        for(int i=0;i<5;i++){
+            array[i]=s.nextInt();
+        }
+        System.out.println("\nThe array before sorting :");
+        for(int i=0;i<5;i++){
+            System.out.print(array[i]+ "\t");
+        }
+        System.out.println();
+        int temp;
+        for(int i=0;i<5;i++){
+            for(int j=0;j<5;j++){
+                if(array[i]<array[j]){
+                    temp=array[i];
+                    array[i]=array[j];
+                    array[j]=temp;
+                }
+            }
+        }
+        System.out.println("\nThe array after sorting :");
+        for(int i=0;i<5;i++){
+            System.out.print(array[i]+ "\t");
+        }
+    }
+}
